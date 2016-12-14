@@ -27,6 +27,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-archives
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -37,6 +38,23 @@ timezone: Asia/Shanghai
 
 disqus:
   shortname: ferrinfriends
+
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - tags
+    - categories
+  layout: archive
+  layouts:
+    year: year-archive
+    month: month-archive
+  permalinks:
+    year: '/archives/:year/'
+    month: '/archives/:year/:month/'
+    tag: '/tags/:name/'
+    category: '/categories/:name/'
+
 defaults:
   -
     scope:
