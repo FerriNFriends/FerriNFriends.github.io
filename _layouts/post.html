@@ -6,7 +6,7 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
-      | <span class="post-categories">Categories: {{ page.categories  | join: ', ' }}</span>
+      | <span class="post-categories">Categories: {{ page.categories | join: ', ' }}</span>
       {% if page.tags != empty %}
         | <span class="post-tags">Tags: {{ page.tags | join: ', ' }}</span>
       {% endif %}
